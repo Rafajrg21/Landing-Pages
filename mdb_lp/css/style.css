@@ -1,0 +1,13 @@
+body, html, header {
+    height: 100%;
+}
+
+#intro {
+    background: url("../img/bg-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-top: 8vh;
+    height: 100vh;
+}
