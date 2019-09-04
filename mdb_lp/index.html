@@ -12,6 +12,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Mapbox styles -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -75,7 +77,7 @@
 
       </div>
     </nav>
-    <!--! Navbar -->
+    <!--? Navbar -->
 
     <!-- Mask -->
     <div id="intro" class="view">
@@ -108,7 +110,7 @@
 
       </div>
     </div>
-    <!--! Mask -->
+    <!--? Mask -->
 
   </header>
 
@@ -171,7 +173,7 @@
           <!-- Grid Column -->
           <div class="col-md-4 mb-1">
 
-            <i class="fas fa-bycicle fa-4x orange-text"></i>
+            <i class="fas fa-biking fa-4x orange-text"></i>
             <h4 class="my-4 font-weight-bold">Adventure</h4>
             <p class="grey-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque laboriosam
               distinctio deleniti
@@ -184,7 +186,7 @@
         </div>
         <!--! Grid Row -->
       </section>
-      <!--! Best Features -->
+      <!--? Best Features -->
 
       <hr class="my-5">
 
@@ -313,7 +315,7 @@
         </div>
         <!--! Grid Row -->
       </section>
-      <!--! Section: Examples -->
+      <!--? Section: Examples -->
 
       <hr class="my-5">
 
@@ -382,7 +384,7 @@
             <a href="" class="teal-text">
               <h6 class="pb-1"><i class="fas fa-heart"></i><strong> Lifestyle </strong></h6>
             </a>
-            
+
             <h4 class="mb-3"><strong>This is title of the news</strong></h4>
             <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
               placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis
@@ -400,17 +402,64 @@
         </div>
         <!--! Grid row -->
       </section>
-      <!--! Section: Gallery -->
-      
+      <!--? Section: Gallery -->
+
       <hr class="my-5">
 
       <!-- Section: Contact -->
       <section id="contact">
+        <!--Heading-->
+        <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
 
+        <!-- Grid row -->
+        <div class="row">
 
+          <!-- Grid column -->
+          <div class="col-lg-5 col-md-12">
 
+            <!-- Form contact -->
+            <form class="p-5 grey-text">
+
+              <div class="md-form form-sm"> <i class="fas fa-user prefix"></i>
+                <input type="text" id="form3" class="form-control form-control-sm">
+                <label for="form3">Your name</label>
+              </div>
+
+              <div class="md-form form-sm"> <i class="fas fa-envelope prefix"></i>
+                <input type="text" id="form2" class="form-control form-control-sm">
+                <label for="form2">Your email</label>
+              </div>
+
+              <div class="md-form form-sm"> <i class="fas fa-tag prefix"></i>
+                <input type="text" id="form32" class="form-control form-control-sm">
+                <label for="form34">Subject</label>
+              </div>
+
+              <div class="md-form form-sm"> <i class="fas fa-pencil-alt prefix"></i>
+                <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                <label for="form8">Your message</label>
+              </div>
+
+              <div class="text-center mt-4">
+                <button class="btn btn-primary">Send <i class="far fa-paper-planeml-1"></i></button>
+              </div>
+
+            </form>
+            <!--! Form contact -->
+          </div>
+          <!--! Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-7 col-md-12">
+            <!--Google map-->
+            <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+          </div>
+          <!--! Grid column -->
+
+        </div>
+        <!--! Grid row -->
       </section>
-      <!--! Section: Contact -->
+      <!--? Section: Contact -->
 
     </div>
   </main>
@@ -430,12 +479,26 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Mapbox Javascript -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
 
   <!-- Carousel Options -->
   <script>
     $('.carousel').carousel({
       interval: 3000,
     })
+  </script>
+
+  <!-- Map Configuration -->
+  <script>
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoicmFmYWpyZzIxIiwiYSI6ImNrMDRlMWVhejAwcW0zbnBud285aXhwcnQifQ.GhwXIUAbstBszrXXwL7YVw';
+    var map = new mapboxgl.Map({
+      container: 'map-container', // container id
+      style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+      center: [-74.50, 40], // starting position [lng, lat]
+      zoom: 9 // starting zoom
+    });
   </script>
 </body>
 
