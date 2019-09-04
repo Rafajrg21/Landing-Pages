@@ -7,7 +7,19 @@ body, html, header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    margin-top: 8vh;
     height: 100vh;
 }
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
