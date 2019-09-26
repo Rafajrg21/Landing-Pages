@@ -11,7 +11,7 @@ body {
 }
 
 .header-two {
-    background-image: url(../images/business-woman.jpg);
+    background-image: url(../public/images/business-woman.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 630px;
@@ -19,7 +19,7 @@ body {
 }
 
 .partner-area {
-    background-image: url(../images/rocky-background.jpg);
+    background-image: url(../public/images/rocky-background.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 200px;
@@ -53,7 +53,7 @@ body {
 }
 
 .outer {
-    background-image: url(../images/startup.jpg);
+    background-image: url(../public/images/startup.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 700px;
